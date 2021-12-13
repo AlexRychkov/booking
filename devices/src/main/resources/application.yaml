@@ -1,0 +1,34 @@
+logging:
+  level:
+    io.r2dbc.postgresql.QUERY: DEBUG
+    io.r2dbc.postgresql.PARAM: DEBUG
+server:
+  port: 8082
+spring:
+  kafka:
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
+  r2dbc:
+    username: postgres
+    password: postgres
+    url: r2dbc:postgresql://localhost:5433/postgres
+    pool.enabled: true
+    pool.initial-size: 10
+    pool.max-idle-time: 1m
+    pool.max-size: 30
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+device:
+  api:
+    url: https://apis.dashboard.techspecs.io/cs6vk2qrkhg626ia/
+    primaryApiKey: vGV4CWhDJO9fMPnJLQ6yHJRyvDtm6wHG
+    secondaryApiKey: vGV4CWhDJO9fMPnJLQ6yHJRyvDtm6wHG

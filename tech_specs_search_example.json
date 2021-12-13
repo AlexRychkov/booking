@@ -1,0 +1,27 @@
+{
+  "Success": 1,
+  "message": "product matched",
+  "error": {},
+  "data": {
+    "results": [
+      {
+        "model": {
+          "raw": "Apple iPhone 13 5G"
+        },
+        "category": {
+          "raw": "smartphone"
+        },
+        "brand": {
+          "raw": "Apple"
+        },
+        "version": {
+          "raw": "A2631"
+        },
+        "_meta": {
+          "score": 9.060439,
+          "id": "6186b047987cda5f88311983"
+        }
+      }
+    ]
+  }
+}

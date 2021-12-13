@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_package = "org.booking.common";
+
+enum UserRole {
+    ADMIN = 0;
+    DEVELOPER = 1;
+}
+
+message DeviceCreated {
+    string public_id = 1;
+    string name = 2;
+}
